@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title><%= title %></title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
+		<script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="/javascripts/ajax.js"></script>
+		<script type="text/javascript" src="/javascripts/mobile-util.js"></script>
+	</head>
+	<body>
+		<header class="clear">
+			<img src="/images/01.jpg" />
+			<img src="/images/02.jpg" />
+			<img src="/images/03.jpg" />
+			<p>Bons jours</p>
+		</header>
+		<div class="d_banner">
+			<img src="/images/<%= shop[0].img %>" />
+		</div>
+		<div class="d_con">
+			<h2>LAZY OAF</h2>
+			<h1><%= shop[0].head %></h1>
+			<h3><%= shop[0].jiage %></h3>
+			<div class="detail">
+				<h4><%= shop[0].con1 %></h4>
+				<p><%= shop[0].con2 %></p>
+			</div>
+		</div>
+	</body>
+</html>

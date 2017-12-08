@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title><%= title %></title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
+		<script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="/javascripts/ajax.js"></script>
+		<script type="text/javascript" src="/javascripts/mobile-util.js"></script>
+	</head>
+	<body>
+		<header class="clear">
+			<img src="/images/01.jpg" />
+			<img src="/images/02.jpg" />
+			<img src="/images/03.jpg" />
+			<p>Bons jours</p>
+		</header>
+		<banner>
+			<img src="/images/04.jpg" />
+		</banner>
+		<div class="con1">
+			<p><span>Size:</span><span>XS</span><span>S</span><span>SM</span><span>L</span><span>XL</span></p>
+			<p><span>Price:</span><span>$25</span><span>$50</span><span>$75</span><span>$100</span></p>
+		</div>
+		<div class="con clear">
+			<% for(var i in shop){ %>
+				<figure>
+					<a href="/detail/<%= shop[i].id %>"><img src="/images/<%= shop[i].img %>" /></a>
+					<figcaption>
+						<h1><%= shop[i].head %></h1>
+						<p><%= shop[i].jiage %></p>
+					</figcaption>
+				</figure>
+			<% } %>
+		</div>
+	</body>
+</html>
